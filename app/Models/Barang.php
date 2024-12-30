@@ -9,4 +9,7 @@ class Barang extends Model
 {
     /** @use HasFactory<\Database\Factories\BarangFactory> */
     use HasFactory;
+
+    protected $table = 'Barang';
+    public $timestamps = false;
 }

@@ -9,4 +9,6 @@ class Ruangan extends Model
 {
     /** @use HasFactory<\Database\Factories\RuanganFactory> */
     use HasFactory;
+    protected $table = 'Ruangan';
+    public $timestamps = false;
 }

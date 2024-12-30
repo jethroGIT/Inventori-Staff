@@ -17,7 +17,11 @@ class BarangFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'No_inventaris' => $this->faker->unique()->regexify('INV[0-9]{3}'), // Format: INV### (3 digit angka)
+            'Nama_barang' => $this->faker->randomElement(['Camera', 'Meja', 'Mic', 'Troli']), // Nama barang berupa 2 kata acak
+            'Jenis_barang' => $this->faker->randomElement(['Elektronik', 'Furniture', 'Alat Tulis', 'Kendaraan']), // Pilihan jenis barang
+            'Merk_barang' => $this->faker->randomElement(['Sony', 'Lenovo', 'ABC', 'Aqua']), // Batas panjang 10 karakter untuk merk barang
+            'Stock_barang' => $this->faker->numberBetween(1, 100), // Stok barang dalam rentang 1-100
         ];
     }
 }
