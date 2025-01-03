@@ -18,7 +18,7 @@ class BarangSeeder extends Seeder
         DB::table('Barang')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         Barang::factory()
-            ->count(10)
+            ->count(100)
             ->create();
     }
 }

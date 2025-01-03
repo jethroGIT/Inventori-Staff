@@ -18,7 +18,7 @@ class RuanganSeeder extends Seeder
         DB::table('Ruangan')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         Ruangan::factory()
-            ->count(10)
+            ->count(100)
             ->create();
     }
 }
