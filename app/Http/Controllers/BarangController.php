@@ -69,9 +69,9 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        // Eloquent ORM
+        // Eloquent ORM 
         $detailBarang = Barang::findOrFail($id); // -> inculde abort(404) jika id tidak ada
-        
+
         // Query Builder
         // $detailBarang = DB::table('Barang')->where('No_inventaris', 'LIKE', '%'.$id.'%')->first();
         //
